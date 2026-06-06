@@ -14,7 +14,7 @@ final class CounterStore: ObservableObject {
     private let reducer: (CounterState, CounterIntent) -> (CounterState, [Effect])
     private var effectCancellables: [UUID: Any] = [:] // optional reference tracking
 
-    init(initialState: CounterState = CounterState(),
+    init(initialState: CounterState = CounterState(counter:  CounterModel()),
          reducer: @escaping (CounterState, CounterIntent) -> (CounterState, [Effect]) = counterReducer) {
         self.state = initialState
         self.reducer = reducer

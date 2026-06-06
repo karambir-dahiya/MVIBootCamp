@@ -21,13 +21,13 @@ func counterReducer(state: CounterState, intent: CounterIntent) -> (CounterState
 
     switch intent {
     case .increment:
-        newState.count += 1
+        newState.counter.count += 1
 
     case .decrement:
-        newState.count -= 1
+        newState.counter.count -= 1
 
     case .reset:
-        newState.count = 0
+        newState.counter.count = 0
 
     case .incrementAfterDelay(let seconds):
         newState.isLoading = true
@@ -40,7 +40,7 @@ func counterReducer(state: CounterState, intent: CounterIntent) -> (CounterState
 
     case .didFinishIncrement:
         newState.isLoading = false
-        newState.count += 1
+        newState.counter.count += 1
     }
 
     return (newState, effects)

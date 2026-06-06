@@ -12,7 +12,7 @@ struct CounterView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            Text("Count: \(store.state.count)")
+            Text("Count: \(store.state.counter.count)")
                 .font(.largeTitle)
 
             if store.state.isLoading {

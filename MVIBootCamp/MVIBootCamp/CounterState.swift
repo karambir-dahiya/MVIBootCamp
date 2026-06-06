@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct CounterState: Equatable {
+struct CounterModel: Equatable {
     var count: Int = 0
+}
+
+struct CounterState: Equatable {
+    var counter: CounterModel
     var isLoading: Bool = false // example of UI flag
 }

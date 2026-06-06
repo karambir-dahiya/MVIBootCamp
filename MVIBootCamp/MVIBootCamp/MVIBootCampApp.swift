@@ -11,7 +11,7 @@ import SwiftUI
 struct MVIBootCampApp: App {
     var body: some Scene {
         WindowGroup {
-            CounterView(store: CounterStore.init(initialState: .init()))
+            CounterView(store: CounterStore.init(initialState: .init(counter: CounterModel())))
         }
     }
 }
